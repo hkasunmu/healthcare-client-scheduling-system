@@ -37,9 +37,29 @@ elif appointment_choice == "4":
     appointment_type = "Specialist Consultation"
 else:
     appointment_type = "Invalid Selection"
+    print("\nSelect Healthcare Provider")
+print("1. Dr. Sarah Johnson")
+print("2. Dr. Michael Brown")
+print("3. Dr. Emily Davis")
+print("4. Dr. James Wilson")
+
+provider_choice = input("Enter your choice (1-4): ")
+
+if provider_choice == "1":
+    provider = "Dr. Sarah Johnson"
+elif provider_choice == "2":
+    provider = "Dr. Michael Brown"
+elif provider_choice == "3":
+    provider = "Dr. Emily Davis"
+elif provider_choice == "4":
+    provider = "Dr. James Wilson"
+else:
+    provider = "Invalid Selection"
+
 print("\nAppointment Confirmation")
 print("------------------------")
 print("Client: " + client_name)
 print("Date: " + appointment_date)
 print("Time: " + appointment_time)
 print("Appointment Type: " + appointment_type)
+print("Provider: " + provider)
