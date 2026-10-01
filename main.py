@@ -1,3 +1,6 @@
+import csv
+import os
+
 print("Hello World!")
 
 print("==============================")
@@ -80,3 +83,31 @@ print("Date: " + appointment_date)
 print("Time: " + appointment_time)
 print("Appointment Type: " + appointment_type)
 print("Provider: " + provider)
+
+file_exists = os.path.exists("appointments.csv")
+
+with open("appointments.csv", "a", newline="") as file:
+    writer = csv.writer(file)
+
+    if not file_exists:
+        writer.writerow([
+            "Name",
+            "Age",
+            "Phone",
+            "Appointment Date",
+            "Appointment Time",
+            "Appointment Type",
+            "Provider"
+        ])
+
+    writer.writerow([
+        client_name,
+        client_age,
+        client_phone,
+        appointment_date,
+        appointment_time,
+        appointment_type,
+        provider
+    ])
+
+print("\nAppointment saved successfully!")
