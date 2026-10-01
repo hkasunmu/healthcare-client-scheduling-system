@@ -18,7 +18,24 @@ print("\nAppointment Scheduling")
 print("----------------------")
 
 appointment_date = input("Enter appointment date (MM/DD/YYYY): ")
-appointment_time = input("Enter appointment time: ")
+print("\nAvailable Appointment Times")
+print("1. 9:00 AM")
+print("2. 10:30 AM")
+print("3. 1:00 PM")
+print("4. 2:30 PM")
+
+time_choice = input("Select a time (1-4): ")
+
+if time_choice == "1":
+    appointment_time = "9:00 AM"
+elif time_choice == "2":
+    appointment_time = "10:30 AM"
+elif time_choice == "3":
+    appointment_time = "1:00 PM"
+elif time_choice == "4":
+    appointment_time = "2:30 PM"
+else:
+    appointment_time = "Invalid Selection"
 print("\nSelect Appointment Type")
 print("1. Annual Checkup")
 print("2. Follow-Up Visit")
